@@ -1,0 +1,48 @@
+{
+  "name": "design-studio",
+  "version": "1.0.0",
+  "description": "デザイン工房-ウェブデザイナ向け開発環境-",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js; npm run gulp ejs",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js; npm run gulp ejs",
+    "gulp": "gulp",
+    "netlify": "netlify",
+    "dep": "npm run production; netlify deploy",
+    "deploy": "netlify deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ucan-lab@github.com/ucan-lab/design-studio.git"
+  },
+  "keywords": [],
+  "author": "ucan-lab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ucan-lab/design-studio/issues"
+  },
+  "homepage": "https://github.com/ucan-lab/design-studio#readme",
+  "devDependencies": {
+    "axios": "^0.17",
+    "bootstrap-sass": "^3.3.7",
+    "browser-sync": "^2.23.3",
+    "cross-env": "^5.1",
+    "gulp": "^3.9.1",
+    "gulp-cached": "^1.1.1",
+    "gulp-ejs": "^3.1.1",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-notify": "^3.1.0",
+    "gulp-plumber": "^1.1.0",
+    "jquery": "^3.2",
+    "laravel-mix": "^1.0",
+    "lodash": "^4.17.4",
+    "netlify-cli": "^1.2.2",
+    "vue": "^2.5.7"
+  }
+}
